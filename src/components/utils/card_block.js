@@ -2,12 +2,10 @@ import React from 'react';
 import Card from '../utils/card';
 
 const CardBlock = props => {
-   const renderCards = () => {
-      console.log(props.list);
-      return props.list
+   const renderCards = () =>
+      props.list
          ? props.list.map((card, i) => <Card key={i + card.name} {...card} />)
          : null;
-   };
 
    return (
       <div className="card_block">
